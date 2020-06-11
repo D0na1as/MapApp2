@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_graph"
+    app:startDestination="@id/UserFragment">
+    <fragment
+        android:id="@+id/UserFragment"
+        android:name="com.example.helpapp.UserFragment"
+        android:label="UserFragment" />
+</navigation>

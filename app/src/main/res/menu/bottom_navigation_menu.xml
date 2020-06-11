@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/map_graph"
+        android:enabled="true"
+        android:icon="@drawable/map"
+        android:title="@string/Hot_Tub"/>
+    <item
+        android:id="@+id/info_graph"
+        android:enabled="true"
+        android:icon="@drawable/info"
+        android:title="Informacija"/>
+    <item
+        android:id="@+id/feedback_graph"
+        android:enabled="true"
+        android:icon="@drawable/feedback_chat"
+        android:title="Atsiliepimai"/>
+    <item
+        android:id="@+id/user_graph"
+        android:enabled="true"
+        android:icon="@drawable/person"
+        android:title="Vartotojas"/>
+</menu>
