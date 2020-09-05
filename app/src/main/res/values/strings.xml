@@ -26,6 +26,16 @@
     <string name="text">Šiandien mums trūksta:</string>
     <string name="name">Pirmas TextView laukas</string>
     <string name="description">Aprasymas</string>
-    <string name="title_detailed">Situacija šiuo metu:</string>
+    <string name="title_detailed">Šiuo metu trūksta:</string>
     <string name="curent_individual">Dabartine situacija</string>
+    <string name="name_feedback">Vartotojo vardas</string>
+    <string name="massage_feedback" />
+    <string name="user_btn_lft">Istaiga</string>
+    <string name="user_btn_rgt">Givejas</string>
+    <string name="img_name">Labiausiai trūksta:</string>
+    <string name="r_img_name_individual">Antbačių</string>
+    <string name="title_person_individual">Įstaigos atstovas:</string>
+    <string name="ac_person_individual">Jonas Jonaitis</string>
+    <string name="count_individual">15</string>
+    <string name="urgent_title">"Skubiai reikia: "</string>
 </resources>

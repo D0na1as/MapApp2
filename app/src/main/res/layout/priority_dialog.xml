@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <RadioGroup
+                android:id="@+id/priority_radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/priority_shoe_covers"
+                    android:layout_width="match_parent"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:button="@mipmap/shoe_covers"
+                    android:background="@drawable/radiobutton_state"
+                    android:text="Antbačių" />
+
+                <RadioButton
+                    android:id="@+id/priority_caps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/radiobutton_state"
+                    android:button="@mipmap/cap"
+                    android:text="Kepuraičių" />
+
+                <RadioButton
+                    android:id="@+id/priority_goggles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:button="@mipmap/goggles"
+                    android:background="@drawable/radiobutton_state"
+                    android:layout_marginBottom="5dp"
+                    android:text="Apsauginių akinių" />
+
+                <RadioButton
+                    android:id="@+id/priority_suits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:button="@mipmap/suit"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/radiobutton_state"
+                    android:text="Vienkartinių kostiumų" />
+
+                <RadioButton
+                    android:id="@+id/priority_masks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/radiobutton_state"
+                    android:button="@mipmap/mask"
+                    android:text="Apsauginių kaukių" />
+
+                <RadioButton
+                    android:id="@+id/priority_gloves"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:button="@mipmap/gloves"
+                    android:background="@drawable/radiobutton_state"
+                    android:text="Vienkartinių pirštinių" />
+
+                <RadioButton
+                    android:id="@+id/priority_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:button="@mipmap/ok"
+                    android:background="@drawable/radiobutton_state"
+                    android:text="Turime visko pakankamai" />
+
+            </RadioGroup>
+        </ScrollView>
+    </LinearLayout>
+</ScrollView>

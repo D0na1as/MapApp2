@@ -12,11 +12,6 @@
         android:icon="@drawable/info"
         android:title="Informacija"/>
     <item
-        android:id="@+id/feedback_graph"
-        android:enabled="true"
-        android:icon="@drawable/feedback_chat"
-        android:title="Atsiliepimai"/>
-    <item
         android:id="@+id/user_graph"
         android:enabled="true"
         android:icon="@drawable/person"

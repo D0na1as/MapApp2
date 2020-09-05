@@ -70,11 +70,11 @@ class NavigationExtensions {
                     final NavHostFragment selectedFragment = (NavHostFragment) fragmentManager.findFragmentByTag(newlySelectedItemTag);
                     if (!firstFragmentTag.equals(newlySelectedItemTag)) {
                         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction()
-//                                .setCustomAnimations(
-//                                        R.anim.nav_default_enter_anim,
-//                                        R.anim.nav_default_exit_anim,
-//                                        R.anim.nav_default_pop_enter_anim,
-//                                        R.anim.nav_default_pop_exit_anim)
+                                .setCustomAnimations(
+                                        R.anim.nav_default_enter_anim,
+                                        R.anim.nav_default_exit_anim,
+                                        R.anim.nav_default_pop_enter_anim,
+                                        R.anim.nav_default_pop_exit_anim)
                                 .attach(selectedFragment)
                                 .setPrimaryNavigationFragment(selectedFragment);
                         for (int i = 0; i < graphIdToTagMap.size(); i++) {

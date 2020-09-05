@@ -2,9 +2,39 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/user_graph"
-    app:startDestination="@id/UserFragment">
+    app:startDestination="@id/userFragment">
     <fragment
-        android:id="@+id/UserFragment"
+        android:id="@+id/userFragment"
         android:name="com.example.helpapp.UserFragment"
-        android:label="UserFragment" />
+        android:label="UserFragment" >
+        <action
+            android:id="@+id/action_userFragment_to_recipientRegister"
+            app:destination="@id/recipientRegister" />
+        <action
+            android:id="@+id/action_userFragment_to_individualFragment2"
+            app:destination="@id/individualFragment" />
+        <action
+            android:id="@+id/action_userFragment_to_resetFragment"
+            app:destination="@id/resetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipientRegister"
+        android:name="com.example.helpapp.UserScreen.RecipientRegister"
+        android:label="RecipientRegister" >
+        <action
+            android:id="@+id/action_recipientRegister_to_recipientFragment"
+            app:destination="@id/recipientFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/individualFragment"
+        android:name="com.example.helpapp.InfoScreen.IndividualFragment"
+        android:label="IndividualFragment" />
+    <fragment
+        android:id="@+id/recipientFragment"
+        android:name="com.example.helpapp.UserScreen.RecipientFragment"
+        android:label="RecipientFragment" />
+    <fragment
+        android:id="@+id/resetFragment"
+        android:name="com.example.helpapp.UserScreen.ResetFragment"
+        android:label="ResetFragment" />
 </navigation>

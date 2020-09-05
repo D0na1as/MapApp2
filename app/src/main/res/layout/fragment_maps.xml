@@ -7,25 +7,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/my_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:elevation="4dp"
-            android:textAlignment="center"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:layout_constraintTop_toTopOf="parent"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/my_toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@null"-->
+<!--            android:elevation="4dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">-->
 
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/searchView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                app:queryHint="Ieškoti..." />
+<!--            <androidx.appcompat.widget.SearchView-->
+<!--                android:id="@+id/searchView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="10dp"-->
+<!--                app:queryHint="Ieškoti..." />-->
 
-        </androidx.appcompat.widget.Toolbar>
+<!--        </androidx.appcompat.widget.Toolbar>-->
 
         <com.google.android.gms.maps.MapView
             android:id="@+id/map"
@@ -37,16 +37,16 @@
             android:layout_width="40dp"
             android:layout_height="150dp"
             android:layout_gravity="top|end"
-            android:layout_marginTop="70dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/login"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginEnd="10dp"
-                android:background="@drawable/around_me" />
+<!--            <Button-->
+<!--                android:id="@+id/login"-->
+<!--                android:layout_width="40dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:background="@drawable/around_me" />-->
 
             <Button
                 android:id="@+id/returnView"
@@ -55,11 +55,9 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/ic_stat_name"
-                android:layoutDirection="locale"
-                android:onClick="viewReturned" />
+                android:layoutDirection="locale" />
+
         </LinearLayout>
-
-
     </FrameLayout>
 </layout>
 

@@ -15,14 +15,16 @@ public class HolderDetailed extends RecyclerView.ViewHolder{
     public ImageView image;
     public TextView name;
     public TextView description;
+    public TextView phone;
     public LinearLayout linearLayout;
 
     public HolderDetailed(@NonNull View itemView) {
         super(itemView);
 
-        image = itemView.findViewById(R.id.r_image_overall);
-        name = itemView.findViewById(R.id.r_text1_overall);
-        description = itemView.findViewById(R.id.r_text2_overall);
+        image = itemView.findViewById(R.id.r_image_detailed);
+        name = itemView.findViewById(R.id.r_title_detiled);
+        description = itemView.findViewById(R.id.r_city_detailed);
+        phone = itemView.findViewById(R.id.r_tel_detailed);
         linearLayout = itemView.findViewById(R.id.r_item_detailed);
     }
 }

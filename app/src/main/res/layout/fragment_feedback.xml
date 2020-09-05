@@ -2,18 +2,19 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <FrameLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".FeedbackFragment">
+        android:background="@color/white"
+        tools:context=".UserFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_feedback"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Feedback Fragment"
-            android:gravity="center"
-            android:textSize="30sp" />
+            android:background="#E91E63"
+            android:gravity="center" />
 
-    </FrameLayout>
+
+    </RelativeLayout>
 </layout>

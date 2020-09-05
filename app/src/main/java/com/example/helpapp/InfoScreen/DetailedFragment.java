@@ -3,16 +3,31 @@ package com.example.helpapp.InfoScreen;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.navigation.NavDirections;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.helpapp.Data.Recipient;
+import com.example.helpapp.Data.Company;
+import com.example.helpapp.Data.Company;
+import com.example.helpapp.InfoFragment;
+import com.example.helpapp.MainActivity;
 import com.example.helpapp.R;
 import com.example.helpapp.Adapters.RecyclerAdapter;
 import com.example.helpapp.databinding.FragmentDetailedBinding;
@@ -24,75 +39,52 @@ public class DetailedFragment extends Fragment {
 
     private FragmentDetailedBinding binding;
     private RecyclerView recyclerView;
-    private String[] name = {
-            "Recipient1",
-            "Recipient2",
-            "Recipient3",
-            "Recipient4",
-            "Recipient5",
-            "Recipient6",
-            "Recipient7",
-            "Recipient8",
-            "Recipient9",
-            "Recipient10"
-    };
-
-    String[] description = {
-            "Description1",
-            "Description2",
-            "Description3",
-            "Description4",
-            "Description5",
-            "Description6",
-            "Description7",
-            "Description8",
-            "Description9",
-            "Description10"
-    };
-
-    int[] image = {
-            R.mipmap.box,
-            R.mipmap.cap,
-            R.mipmap.gloves,
-            R.mipmap.box,
-            R.mipmap.goggles,
-            R.mipmap.mask,
-            R.mipmap.shoe_covers,
-            R.mipmap.suit,
-            R.mipmap.box,
-            R.mipmap.cap
-    };
+    public  RecyclerAdapter adapter;
+    private ArrayList<Company> companiesList;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
+
         binding = FragmentDetailedBinding.inflate(inflater, container, false);
+        MainActivity activity = (MainActivity) getActivity();
+        if (activity.companiesList!=null) {
+            companiesList = activity.companiesList;
 
+            recyclerView = binding.getRoot().findViewById(R.id.recycler_view_detailed);
 
-        recyclerView = binding.getRoot().findViewById(R.id.recycler_view_detailed);
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
+            recyclerView.setLayoutManager(linearLayoutManager);
 
-        List<Recipient> sampleRecipient = new ArrayList<>();
-
-        for (int i = 0; i < name.length; i++) {
-
-            Recipient recipient = new Recipient();
-
-            recipient.recipientName = name[i];
-            recipient.recipientDescription = description[i];
-            recipient.recipientImage = image[i];
-            sampleRecipient.add(recipient);
-
+            recyclerView.setHasFixedSize(true);
+            adapter = new RecyclerAdapter(getContext(), companiesList);
+            recyclerView.setAdapter(adapter);
         }
-
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(linearLayoutManager);
-
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setAdapter(new RecyclerAdapter(requireContext(), sampleRecipient));
-
         return binding.getRoot();
     }
 
+//    @Override
+//    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+//
+//        inflater.inflate(R.menu.menu_toolbar, menu);
+//        menu.findItem(R.id.search);
+//
+//        //SearchView searchView = (SearchView) menu.getActionView();
+//        searchView.setImeOptions(EditorInfo.IME_ACTION_DONE);
+//
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                adapter.getFilter().filter(newText);
+//                return false;
+//            }
+//        });
+//    }
 
 }

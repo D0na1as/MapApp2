@@ -5,7 +5,37 @@
     android:id="@+id/info_graph"
     app:startDestination="@id/infoFragment">
     <fragment
+        android:id="@+id/detailedFragment"
+        android:name="com.example.helpapp.InfoScreen.DetailedFragment"
+        android:label="DetailedFragment" >
+        <action
+            android:id="@+id/action_detailedFragment_to_individualFragment"
+            app:destination="@id/individualFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/individualFragment"
+        android:name="com.example.helpapp.InfoScreen.IndividualFragment"
+        android:label="IndividualFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/overallFragment"
+        android:name="com.example.helpapp.InfoScreen.OverallFragment"
+        android:label="OverallFragment" />
+    <fragment
         android:id="@+id/infoFragment"
         android:name="com.example.helpapp.InfoFragment"
-        android:label="InfoFragment" />
+        android:label="InfoFragment" >
+        <action
+            android:id="@+id/action_infoFragment_to_overallFragment3"
+            app:destination="@id/overallFragment" />
+        <action
+            android:id="@+id/action_infoFragment_to_detailedFragment3"
+            app:destination="@id/detailedFragment" />
+        <action
+            android:id="@+id/action_infoFragment_to_individualFragment2"
+            app:destination="@id/individualFragment" />
+    </fragment>
 </navigation>

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,13 +38,8 @@ public class IndividualAdapter extends RecyclerView.Adapter<HolderIndividual> {
         Rcp_data sampleData = data.get(position);
 
         holder.image.setImageResource(sampleData.image);
-        holder.status.setText(sampleData.status);
-        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "Item " + position + " spusteltas", Toast.LENGTH_SHORT).show();
-            }
-        });
+        holder.name.setText(sampleData.name +": " );
+        holder.status.setText("" + sampleData.status );
     }
 
     @Override

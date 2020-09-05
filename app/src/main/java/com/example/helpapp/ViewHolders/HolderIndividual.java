@@ -15,12 +15,14 @@ public class HolderIndividual extends RecyclerView.ViewHolder{
 
     public ImageView image;
     public TextView status;
+    public TextView name;
     public LinearLayout linearLayout;
 
     public HolderIndividual(@NonNull View itemView) {
         super(itemView);
 
         image = itemView.findViewById(R.id.r_image_individual);
+        name = itemView.findViewById(R.id.r_name_individual);
         status = itemView.findViewById(R.id.r_status_individual);
         linearLayout = itemView.findViewById(R.id.r_item_individual);
     }

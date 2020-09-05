@@ -1,32 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal"
+    android:id="@+id/r_item_individual"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="wrap_content"
     android:layout_marginTop="8dp"
-    android:gravity="end"
-    android:id="@+id/r_item_individual">
+    android:gravity="start"
+    android:orientation="horizontal"
+    android:paddingStart="5dp"
+    android:paddingEnd="10dp">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
         android:id="@+id/r_image_individual"
-        android:layout_margin="10dp"
-        android:scaleType="centerCrop"/>
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="5dp"
+        android:scaleType="centerCrop" />
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="start|center_vertical">
 
         <TextView
+            android:id="@+id/r_name_individual"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/r_status_individual"
+            android:paddingStart="5dp"
             android:text="@string/curent_individual"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="15dp"/>
+            android:textSize="14sp" />
 
+        <TextView
+            android:id="@+id/r_status_individual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/count_individual"
+            android:textSize="14sp" />
     </LinearLayout>
-
 </LinearLayout>

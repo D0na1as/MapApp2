@@ -7,10 +7,8 @@
     tools:context=".MainActivity"
     android:layout_above="@id/bottom_navigation">
 
-
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:defaultNavHost="true"
@@ -19,13 +17,7 @@
         app:layout_constraintRight_toRightOf="parent"
 
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_weight="1" />
-
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent">-->
+        app:layout_constraintVertical_weight="1"/>
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
@@ -40,7 +32,5 @@
             app:menu="@menu/bottom_navigation_menu">
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-<!--    </LinearLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
